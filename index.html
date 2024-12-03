@@ -24,7 +24,7 @@
     <style> 
       #topText {
             position: fixed;
-            top: 10%;
+            top: 5%;
             left: 50%;
             transform: translateX(-50%);
             padding: 10px;
@@ -33,7 +33,7 @@
         }
       #bottomText {
             position: fixed;
-            bottom: 10%;
+            bottom: 5%;
             left: 50%;
             transform: translateX(-50%);
             padding: 10px;
@@ -110,18 +110,18 @@
       "C1":C1, "C2":C2, "C3":C3, "C4":C4, "C5":C5, "C6":C6, "C7":C7, "C8":C8, "C9":C9, "C10":C10, "C11":C11, "C12":C12
     }
     //INPUT from participants   
-    /*var idnum = parseInt(jsPsych.data.getURLVariable('idnum'))
+    var idnum = parseInt(jsPsych.data.getURLVariable('idnum'))
     var soa = parseInt(jsPsych.data.getURLVariable('soa'))
     var set = jsPsych.data.getURLVariable('set')
     var set1_text = jsPsych.data.getURLVariable('set1')
     var set2_text = jsPsych.data.getURLVariable('set2')
-    var key = jsPsych.data.getURLVariable('key')*/
-    var idnum = 9
+    var key = jsPsych.data.getURLVariable('key')
+    /*var idnum = 9
     var soa = 500
     var set = "C"
     var set1_text = "C1"
     var set2_text = "C7"
-    var key = "posRight"
+    var key = "posLeft"*/
 
     console.log(key)
 
@@ -175,8 +175,8 @@ test_exp_2 = ['入賬','小孩','光棍','回家']
 
 
 
-var experiment_list= [...test_exp_1, ...test_exp_2]
-//var experiment_list= [...set1, ...set2]
+//var experiment_list= [...test_exp_1, ...test_exp_2]
+var experiment_list= [...set1, ...set2]
 
 var practice_list = [...practice_neg_list, ...practice_pos_list]
 
@@ -200,7 +200,8 @@ var practice_list = [...practice_neg_list, ...practice_pos_list]
     var key_text, key_valence_text
     if (key=="posRight") {
       key_assignment = "posRight";
-      key_text = `
+      key_text = 
+      `
       <p>
       <p class="blue-line"><b>在此實驗中，您有兩個任務：
       <p><b>1. 您的任務是透過按下對應的按鍵來判斷螢幕上顯示的字母是“p”還是“q”。在每一個字母出現前，您會看到"+++"標誌和一個複合詞停留在螢幕上一段短時間。
